@@ -1,7 +1,11 @@
+package com.epb.playground.review;
 public class DeckOfCards {
-    private static int numberOfCards = 52;
+    private static int numberOfCards = 0;
 
-    public void getCard() {
-        
+    public DeckOfCards(PlayingCard playingCard ...){
+    }
+
+    public void addCard() {
+
     }
 }

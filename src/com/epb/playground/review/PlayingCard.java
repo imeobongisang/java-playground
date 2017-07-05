@@ -1,3 +1,4 @@
+package com.epb.playground.review;
 public class PlayingCard {
     private String rank;
     private String suit;
