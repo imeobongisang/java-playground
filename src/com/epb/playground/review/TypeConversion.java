@@ -119,7 +119,7 @@ public class TypeConversion {
         // System.out.println(shortResult5);
 
     /*long precision arithmatic*/
-        
+            
         //this should work
         long longResult1 = longVal * intVal;
         
