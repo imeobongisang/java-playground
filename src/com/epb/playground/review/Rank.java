@@ -1,4 +1,6 @@
 package com.epb.playground.review;
-    public enum Suit {
-        HEARTS, CLUBS, DIAMONDS, SPADES
+    public enum Rank {
+        TWO, THREE, FOUR, FIVE, SIX,
+        SEVEN, EIGHT, NINE, TEN, JACK,
+        QUEEN, KING, ACE
     }

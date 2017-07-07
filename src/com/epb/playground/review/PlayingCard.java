@@ -5,14 +5,14 @@ public class PlayingCard {
     private Rank rank;
     private Suit suit;
 
-    public PlayingCard(String rank, String suit) {
-        if(rank.toUpperCase() == this.rank && suit.toUpperCase() == this.suit) {
-            this.rank = rank.toUpperCase();
-            this.suit = suit.toUpperCase();
-        } else {
+    public PlayingCard(Rank rank, Suit suit) {
+        if (rank == null || suit == null){
             throw new RuntimeException("Attempted to make invalid card");
         }
 
+         this.rank = rank;
+         this.suit = suit;
+      
     }
 
     @Override
@@ -22,7 +22,7 @@ public class PlayingCard {
         
         PlayingCard comparedCard = (PlayingCard) object;
 
-        if(this.rank == comparedCard.getRank() && this.rank == comapredCard.getSuit)
+        if(this.rank == comparedCard.getRank() && this.suit == comparedCard.getSuit())
             return true;
         else
             return false;
@@ -30,19 +30,30 @@ public class PlayingCard {
         
     }
 
-    public String getCard(){
-        return "You have the card, " + rank + ", from the " +  suit + " suit.";
-    }
+   
 
-    public String getRank() {
+    public Rank getRank() {
         return this.rank;        
     }
     
 
-    public String getSuit() {
+    public Suit getSuit() {
         return this.suit;        
     }
     
+    public void setRank(Rank rank) {
+         this.rank = rank;        
+    }
+    
+
+    public void setSuit(Suit suit) {
+        this.suit = suit;
+    }
+    
+    @Override
+    public String toString(){
+        return "{rank : " + this.rank  + ", suit : " + this.suit + "}";
+    }
 
 
 }
